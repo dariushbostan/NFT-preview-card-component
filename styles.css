@@ -1,0 +1,159 @@
+:root {
+   /* Primary colors */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral Colors */
+    --dark-blue1: hsl(217, 54%, 11%);
+    --dark-blue2: hsl(216, 50%, 16%);
+    --dark-blue3: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* CSS reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Project Styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-blue1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--dark-blue2);
+    border-radius: 15px;
+    padding: 20px;
+    height: auto;
+    min-width: 355px;
+    width: 355px;
+    box-shadow: 7px 7px 40px 15px rgba(0,0,0,0.26);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card__img {
+    position: relative;
+}
+
+.card__img img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.card__overlay {
+    background-color: var(--Cyan);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40%;
+    opacity: 0;
+    width: 100%;
+    height: 315px;
+}
+
+.card__overlay:hover {
+    opacity: 60%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+
+.card__text h2 {
+    color: var(--White);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card__text h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+.card__text p {
+    color: var(--Soft-blue);
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.card__header {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price span {
+    color: var(--Cyan);
+    margin-left: 10px;
+}
+
+.time span {
+    color: var(--Soft-blue);
+    margin-left: 10px;
+}
+
+.price, .time {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+
+.card__user {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 0 0;
+    border-top: solid 1px var(--dark-blue3);
+    round-cap
+}
+
+.card__user img {
+    height: 2rem;
+    width: auto;
+    margin-right: 15px;
+}
+
+.card__user p {
+    color: var(--Soft-blue); 
+    font-weight: 100;
+}
+
+.card__user span {
+    color: white;
+    font-weight: 300; 
+}
+
+.card__user span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.avatar {
+    border: solid 1px white;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 375px) {
+.card {
+    margin: 20px;
+}
+  }
